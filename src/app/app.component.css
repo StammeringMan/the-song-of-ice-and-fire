@@ -1,0 +1,13 @@
+.mainContainerCol{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #2d4050;
+    color: white;
+    padding-left: 50px;
+}
+
+.mainContainerCol h1{
+    font-size: 2rem;
+    font-weight: 800; 
+}

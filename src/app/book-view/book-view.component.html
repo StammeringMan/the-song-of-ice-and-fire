@@ -1,0 +1,38 @@
+<!--Single Book View-->
+<div class="container">
+  <div class="row" *ngIf="currentBook">
+    <div class="col-md-12" *ngFor="let bookData of currentBook">
+      <h2>{{ bookData.name }}</h2>
+      <p>
+        Isbn: {{ bookData.isbn }}
+      </p>
+      <p>
+        Url: {{ bookData.url }}
+      </p>
+      <p *ngIf="bookData.authors.length>1">
+        Authors: {{ bookData.authors }}
+        <span *ngFor="let author of bookData.authors;let first=first;let last=last">{{ author }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p>
+        Number of Pages: {{ bookData.numberOfPages }}
+      </p>
+      <p>
+        Publisher: {{ bookData.publisher }}
+      </p>
+      <p>
+        Country: {{ bookData.country }}
+      </p>
+      <p>
+        Media Type: {{ bookData.mediaType }}
+      </p>
+      <p>
+        Released: {{ bookData.released }}
+      </p>
+      <p *ngIf="bookData.characters.length>1">
+        Characters: 
+        <span *ngFor="let character of bookData.characters;let first=first;let last=last">{{ character }}{{ last ? '' : ', ' }}</span>
+      </p>
+    </div>
+
+  </div>
+</div>

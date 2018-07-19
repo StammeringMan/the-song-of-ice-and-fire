@@ -1,0 +1,16 @@
+[2018-07-16 17:01:12.694] [main] [info] update#setState idle
+[2018-07-16 17:01:42.702] [main] [info] update#setState checking for updates
+[2018-07-16 17:01:43.851] [main] [info] update#setState idle
+[2018-07-16 18:01:42.804] [main] [info] update#setState checking for updates
+[2018-07-16 18:01:43.866] [main] [info] update#setState idle
+[2018-07-16 19:01:42.848] [main] [info] update#setState checking for updates
+[2018-07-16 19:01:43.916] [main] [info] update#setState idle
+[2018-07-16 20:01:42.880] [main] [info] update#setState checking for updates
+[2018-07-16 20:01:43.930] [main] [info] update#setState idle
+[2018-07-16 21:01:42.988] [main] [info] update#setState checking for updates
+[2018-07-16 21:01:54.136] [main] [error] Error: net::ERR_NAME_NOT_RESOLVED
+[2018-07-16 21:01:54.139] [main] [info] update#setState idle
+[2018-07-16 22:01:43.032] [main] [info] update#setState checking for updates
+[2018-07-16 22:01:44.215] [main] [info] update#setState idle
+[2018-07-16 23:01:43.104] [main] [info] update#setState checking for updates
+[2018-07-16 23:01:44.174] [main] [info] update#setState idle

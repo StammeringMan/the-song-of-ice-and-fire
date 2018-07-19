@@ -1,0 +1,65 @@
+Looking for git in: git
+Using git 1.9.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/abhinav/Desktop/series
+> git status -z -u
+> git rev-parse --show-toplevel
+> git symbolic-ref --short HEAD
+> git rev-parse master
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --symbolic-full-name master@{u}
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: No upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+fatal: Not a git repository (or any of the parent directories): .git
+> git rev-parse --show-toplevel
+> git rev-parse --show-toplevel
+> git show :src/app/app.module.ts
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/book-http.service.ts
+> git show :src/app/book-view/book-view.component.ts
+> git show :src/app/app.module.ts
+> git show :src/app/app.component.html
+> git show :src/app/app.module.ts
+> git show :src/app/home/home.component.html
+> git show :src/app/app.module.ts
+> git show :src/app/app.component.html
+> git show :src/app/book-view/book-view.component.ts
+> git check-ignore -z --stdin
+> git show :src/app/book-view/book-view.component.html
+> git check-ignore -z --stdin
+> git show :src/app/home/home.component.html
+> git show :src/app/book-view/book-view.component.ts
+> git show :src/app/home/home.component.html
+> git show :src/app/book-http.service.ts
+> git show :src/app/book-view/book-view.component.ts
+> git show :src/app/app.module.ts
+> git show :src/app/book-view/book-view.component.ts
+> git show :src/app/home/home.component.html
+> git show :src/app/app.module.ts
