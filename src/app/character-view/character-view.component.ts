@@ -28,8 +28,23 @@ export class CharacterViewComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-  
-    }
+    let myCharacterId = this._route.snapshot.paramMap.get('id');
+    console.log(myCharacterId);
+
+
+    this.characterHttpService.getSingleCharacterInfo(myCharacterId).subscribe(
+
+      data => {
+        console.log(data);
+        this.currentCharacter = data;
+      },
+      error => {
+        console.log("some error occured");
+        console.log(error.errorMessage);
+      }
+    )
+  }
+
 
   ngOnDestroy() {
     console.log("Character View Component Destroyed");
