@@ -31,10 +31,7 @@ export class CharacterViewComponent implements OnInit, OnDestroy {
     let myCharacterId = this._route.snapshot.paramMap.get('id');
     console.log(myCharacterId);
 
-<<<<<<< HEAD
     this.spinner.show();
-=======
->>>>>>> 3eb5df2eeeeb2845f1651ae96a16ddfd102e9a8a
 
     this.characterHttpService.getSingleCharacterInfo(myCharacterId).subscribe(
 
@@ -47,12 +44,9 @@ export class CharacterViewComponent implements OnInit, OnDestroy {
         console.log(error.errorMessage);
       }
     )
-<<<<<<< HEAD
     setTimeout(() => {
       this.spinner.hide();
     }, 2000);
-=======
->>>>>>> 3eb5df2eeeeb2845f1651ae96a16ddfd102e9a8a
   }
 
 
