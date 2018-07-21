@@ -6,9 +6,8 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 //importing observables related code
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators';
 import { tap } from 'rxjs/operators';
-import { filter } from 'rxjs/operators';
+import { delay } from 'rxjs/operators';
 
 
 
@@ -24,6 +23,13 @@ export class CharacterHttpService {
     console.log("Character Http service was called");
   }
 
+  // Exception Handler
+  private handleError(err : HttpErrorResponse ){
+    console.log("Handle error Http calls")
+    console.log(err.message);
+    return Observable.throw(err.message);
+  }
+
   // method to return all Characters
 
   public getAllCharacters():any {
@@ -36,7 +42,9 @@ export class CharacterHttpService {
 
   // method to return single Character Informations
   public getSingleCharacterInfo(currentId):any{
-    let myRespinse = this._http.get(this.baseUrl+'/characters/'+ currentId);
+    let myResponse = (this._http.get(this.baseUrl+'/characters/'+ currentId)).pipe(delay(2000));
+    console.log(myResponse);
+    return myResponse;
   }
   //end get Charecter info function
 }

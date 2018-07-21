@@ -1,0 +1,54 @@
+
+<!--Single Book View-->
+<ngx-spinner></ngx-spinner>
+<div class="container">
+  <div class="row" *ngIf="currentHouse">
+    <div class="col-md-12">
+      <h2>Name: {{ currentHouse.name }}</h2>
+      <p>
+        Url: {{ currentHouse.url }}
+      </p>
+      <p>
+        Region: {{ currentHouse.region }}
+      </p>
+      <p>
+        Coat Of Arms: {{ currentHouse.coatOfArms }}
+      </p>
+      <p *ngIf=" currentHouse.titles.length>0">
+        Titles: 
+        <span *ngFor="let title of  currentHouse.tritles;let first=first;let last=last">{{ title }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentHouse.seats.length>0">
+        Seats: 
+        <span *ngFor="let seat of  currentHouse.seats;let first=first;let last=last">{{ seat }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p>
+        Current Lord: {{ currentHouse.currentLord }}
+      </p>
+      <p>
+        Hier:   {{ currentHouse.hier }}
+      </p>
+      <p>
+        Overlord:   {{ currentHouse.overlord }}
+      </p>
+      <p>
+        Founded:   {{ currentHouse.founded }}
+      </p>
+      <p>
+        DiedOut:   {{ currentHouse.diedOut }}
+      </p>
+      <p *ngIf=" currentHouse.ancestralWeapons.length>0">
+        Ancestral Weapons: 
+        <span *ngFor="let ancestralWeapon of  currentHouse.ancestralWeapons;let first=first;let last=last">{{ ancestralWeapon }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentHouse.cadetBranches.length>0">
+        Cadet Branches: 
+        <span *ngFor="let cadetBranche of  currentHouse.cadetBranches;let first=first;let last=last">{{ cadetBranche }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentHouse.swornMembers.length>0">
+        Sworn Members: 
+        <span *ngFor="let swornMember of  currentHouse.swornMembers;let first=first;let last=last">{{ swornMember }}{{ last ? '' : ', ' }}</span>
+      </p>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '../book.service';
 import { BookHttpService } from '../book-http.service';
 
+//Importing Loader
+import { NgxSpinnerService } from 'ngx-spinner';
+
 @Component({
   selector: 'app-book-view',
   templateUrl: './book-view.component.html',
@@ -15,7 +18,7 @@ export class BookViewComponent implements OnInit, OnDestroy {
 
   public currentBook;
 
-  constructor(private _route: ActivatedRoute, private router: Router, private bookService: BookService, private bookHttpService: BookHttpService) {
+  constructor(private _route: ActivatedRoute, private router: Router, private bookService: BookService, private bookHttpService: BookHttpService, private spinner: NgxSpinnerService) {
     console.log("book-view Constructor  called");
   }
 
@@ -25,6 +28,8 @@ export class BookViewComponent implements OnInit, OnDestroy {
     // getting the name of the book from the route
     let myBookName = this._route.snapshot.paramMap.get('name');
     console.log(myBookName);
+
+    this.spinner.show();
 
 
     this.bookHttpService.getSingleBookInfo(myBookName).subscribe(
@@ -38,6 +43,9 @@ export class BookViewComponent implements OnInit, OnDestroy {
         console.log(error.errorMessage);
       }
     )
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
   }
 
   ngOnDestroy(): void {

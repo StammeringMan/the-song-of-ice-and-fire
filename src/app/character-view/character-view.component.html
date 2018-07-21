@@ -1,3 +1,60 @@
-<p>
-  character-view works!
-</p>
+
+<!--Single Book View-->
+<ngx-spinner></ngx-spinner>
+<div class="container">
+  <div class="row" *ngIf="currentCharacter">
+    <div class="col-md-12">
+      <h2>Name: {{ currentCharacter.name }}</h2>
+      <p>
+        Gender: {{ currentCharacter.gender }}
+      </p>
+      <p>
+        Url: {{ currentCharacter.url }}
+      </p>
+      <p>
+        Culture: {{ currentCharacter.culture }}
+      </p>
+      <p>
+        Born: {{ currentCharacter.born }}
+      </p>
+      <p>
+        Died: {{ currentCharacter.died }}
+      </p>
+      <p>
+        Titles: {{ currentCharacter.titles }}
+      </p>
+      <p>
+        Aliases:   {{ currentCharacter.aliases }}
+      </p>
+      <p>
+        Father:   {{ currentCharacter.father }}
+      </p>
+      <p>
+        Mother:   {{ currentCharacter.mother }}
+      </p>
+      <p>
+        Spouse:   {{ currentCharacter.spouse }}
+      </p>
+      <p *ngIf=" currentCharacter.allegiances.length>0">
+        Allegiances: 
+        <span *ngFor="let allegiance of  currentCharacter.allegiances;let first=first;let last=last">{{ allegiance }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentCharacter.books.length>0">
+        Books: 
+        <span *ngFor="let book of  currentCharacter.books;let first=first;let last=last">{{ book }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentCharacter.povBooks.length>0">
+        POV Books: 
+        <span *ngFor="let povBook of  currentCharacter.povBooks;let first=first;let last=last">{{ povBook }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentCharacter.tvSeries.length>0">
+        TV Series: 
+        <span *ngFor="let tvSeries of  currentCharacter.tvSeries;let first=first;let last=last">{{ tvSeries }}{{ last ? '' : ', ' }}</span>
+      </p>
+      <p *ngIf=" currentCharacter.playedBy.length>0">
+        Played By: 
+        <span *ngFor="let playedBy of  currentCharacter.playedBy;let first=first;let last=last">{{ playedBy }}{{ last ? '' : ', ' }}</span>
+      </p>
+    </div>
+  </div>
+</div>
