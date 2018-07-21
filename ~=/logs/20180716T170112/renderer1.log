@@ -1,3 +1,0 @@
-[2018-07-16 17:01:25.159] [renderer1] [info] no standard startup: not just one window
-[2018-07-16 17:01:40.314] [renderer1] [info] No grammar found for scope source.smarty
-[2018-07-16 17:01:51.210] [renderer1] [error] Error: Inotify limit reached (ENOSPC)
