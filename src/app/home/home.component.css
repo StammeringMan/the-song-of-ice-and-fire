@@ -2,19 +2,75 @@
 .container{
     background-color: white;
 }
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+} 
+
 .upperCol{
     height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 2.2rem;
     color: #586573;
-
 }
 
-.bookInfoCol{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
+.bookPanel, .bookPanelHeading, .bookPanelBody, .bookPanelFooter{
+    background-color: #00BCD4;
+    border: none;
+    color: white;
 }
+
+
+.bookPanelFooter{
+    color: transparent;
+}
+
+.bookPanelFooter a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.characterPanel, .characterPanelHeading, .characterPanelBody, .characterPanelFooter{
+    background-color: #009688;
+    border: none;
+    color: white;
+}
+
+
+.characterPanelFooter{
+    color: transparent;
+}
+
+.characterPanelFooter a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.housePanel, .housePanelHeading, .housePanelBody, .housePanelFooter{
+    background-color: #E91E63;
+    border: none;
+    color: white;
+}
+
+
+.housePanelFooter{
+    color: transparent;
+}
+
+.housePanelFooter a{
+    color: white;
+    text-decoration: none;
+}
+

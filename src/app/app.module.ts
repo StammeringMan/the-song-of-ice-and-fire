@@ -26,6 +26,7 @@ import { CharacterService } from './character.service';
 import { CharacterHttpService } from './character-http.service';
 import { HouseService } from './house.service';
 import { HouseHttpService } from './house-http.service';
+import { MainComponent } from './main/main.component';
 
 //decorators
 @NgModule({
@@ -33,19 +34,21 @@ import { HouseHttpService } from './house-http.service';
     AppComponent,
     HomeComponent,
     BookViewComponent,
-    // NotfoundComponent,
+    NotfoundComponent,
     CharacterViewComponent,
-    HouseViewComponent
+    HouseViewComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'home', component: HomeComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: 'main', component: MainComponent },
+      { path: '', redirectTo: 'main', pathMatch: 'full' },
+      { path: 'home', component:HomeComponent },
       { path: 'books/:name', component: BookViewComponent },
       { path: 'characters/:id', component: CharacterViewComponent },
-      { path: 'houses/:id', component:HouseViewComponent }
-      // { path: '**', component: NotfoundComponent }
+      { path: 'houses/:id', component:HouseViewComponent },
+      { path: '**', component: NotfoundComponent }
     ]),
     HttpClientModule,
     NgxSpinnerModule

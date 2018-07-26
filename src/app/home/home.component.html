@@ -5,84 +5,88 @@
 
       <!--Books Section-->
       <div class="row bookRow">
-        <div class="col-md-12 upperCol">Books</div>
-      </div>
-      <div class="row" *ngIf="allBooks.length>0">
-        <div *ngFor="let book of allBooks" class="col-xl-12 col-md-6 col-lg-3 col-xl-3">
+        <div class="row bookRowHeading">
+          <div class="col-md-12 upperCol">Books</div>
+        </div>
+        <div class="row booksRowContent" *ngIf="allBooks.length>0">
+          <div *ngFor="let book of allBooks" class="col-xs-12 col-md-6 col-lg-3 col-xl-3 bookMainCol">
 
-          <!--Books Iteration div starts here-->
-          <div class="row booksRow">
-            <div class="col-md-12 bookCol">
-              <div class="panel panel-default">
-                <div class="panel-heading">{{book.name}}</div>
-                <div class="panel-body">
-                  <p>
-                    Isbn: {{ book.isbn}}
-                  </p>
-                </div>
-                <div class="panel-footer">
-                  <a [routerLink]="['/books',book.name]" class="btn btn-primary">View</a>
+            <!--Books Iteration div starts here-->
+            <div class="row booksRow">
+              <div class="col-md-12 bookCol">
+                <div class="panel panel-default bookPanel">
+                  <div class="panel-heading bookPanelHeading">{{book.name}}</div>
+                  <div class="panel-body bookPanelBody">
+                    <p>
+                      Isbn: {{ book.isbn}}
+                    </p>
+                  </div>
+                  <div class="panel-footer bookPanelFooter">
+                    <a [routerLink]="['/books',book.name]" class="btn">View</a>
+                  </div>
                 </div>
               </div>
             </div>
+            <!--Books Iteration div ends here-->
           </div>
-          <!--Books Iteration div ends here-->
         </div>
       </div>
 
       <!--Charaters Section-->
-      <div class="row charactersRow">
-        <div class="col-md-12 upperCol">Characters</div>
-      </div>
-      <div class="row" *ngIf="allCharacters.length>0">
-        <div *ngFor="let character of allCharacters" class="col-xl-12 col-md-6 col-lg-3 col-xl-3">
+      <div class="row characterRow">
+        <div class="row charactersRowHeading">
+          <div class="col-md-12 upperCol">Characters</div>
+        </div>
+        <div class="row characterRowContent" *ngIf="allCharacters.length>0">
+          <div *ngFor="let character of allCharacters" class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
 
-          <!--Books Iteration div starts here-->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">{{ character.gender }}</div>
-                <div class="panel-body">
-                  <p>
-                    Aliases: {{ character.aliases }}
-                  </p>
-                </div>
-                <div class="panel-footer">
-                  <a [routerLink]="['/characters', character.url.split('/').pop() ]" class="btn btn-primary">View</a>
+            <!--Books Iteration div starts here-->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel panel-default characterPanel">
+                  <div class="panel-heading characterPanelHeading">{{ character.gender }}</div>
+                  <div class="panel-body characterPanelBody">
+                    <p>
+                      Aliases: {{ character.aliases }}
+                    </p>
+                  </div>
+                  <div class="panel-footer characterPanelFooter">
+                    <a [routerLink]="['/characters', character.url.split('/').pop() ]" class="btn">View</a>
+                  </div>
                 </div>
               </div>
             </div>
+            <!--Character Iteration div ends here-->
           </div>
-          <!--Character Iteration div ends here-->
         </div>
       </div>
 
-      <!--Houses Row-->
-      <div class="row housesRow">
-        <div class="col-md-12 upperCol">Houses</div>
-      </div>
-      <div class="row" *ngIf="allHouses.length>0">
-        <div *ngFor="let house of allHouses" class="col-xl-12 col-md-6 col-lg-3 col-xl-3">
+      <!--Houses Section-->
+      <div class="row houseRow">
+        <div class="row housesRow">
+          <div class="col-md-12 upperCol">Houses</div>
+        </div>
+        <div class="row" *ngIf="allHouses.length>0">
+          <div *ngFor="let house of allHouses" class="col-xs-12 col-md-6 col-lg-3 col-xl-3">
 
-          <!--Books Iteration div starts here-->
-          <div class="row">
-            <div class="col-md-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">{{ house.name }}</div>
-                <div class="panel-body">
-                  <p>
-                    Region: {{ house.region }}
-                  </p>
-                </div>
-                <div class="panel-footer">
-                  <a [routerLink]="['/houses', house.url.split('/').pop() ]" class="btn btn-primary">View</a>
+            <!--Books Iteration div starts here-->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel panel-default housePanel">
+                  <div class="panel-heading housePanelHeading">{{ house.name }}</div>
+                  <div class="panel-body housePanelBody">
+                    <p>
+                      Region: {{ house.region }}
+                    </p>
+                  </div>
+                  <div class="panel-footer housePanelFooter">
+                    <a [routerLink]="['/houses', house.url.split('/').pop() ]" class="btn">View</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!--Character Iteration div ends here-->
+
         </div>
       </div>
     </div>
-  </div>
-</div>
